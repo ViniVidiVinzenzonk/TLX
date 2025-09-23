@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main(void) {
+    int bebek[2][4] = {
+        {0, 10, 50, 60}, // baris pertama jantan
+        {7, 80, 9, 40}}; //baris kedua betina
+
+    int t[2][4] = {};//[0] itu buat jantan, [1] itu buat be
+    //pengulangan penambahan bebekpada hari ke i, kemudian pengecekan, kemudian pembayaran
+    for(int i =0; i<2; i++){ //menentukan jantan betinanya
+        for(int j=0; j<4; j++){//menentukan berapa bebek per hari
+            if(bebek[i][j]>50){
+                t[i][j] += (50000)*bebek[i][j];
+            }
+            else if(10 <=bebek[i][j] && bebek[i][j] <= 50){
+                t[i][j] += (75000)*bebek[i][j];
+            }
+            else{
+                t[i][j] += (100000)*bebek[i][j];
+            }
+            // 0,0 + 1,0 = 0 + 700.000 = 700.000
+            //0,1 + 1,1 = 750.000 + 4,7 = 5.450.000 
+            //cout<<"giliran bebek ["<<i<<"] pada hari ke ["<<j<<"] dibayarkan ["<<t[i]<<endl;
+        }
+         
+    }
+    int day[4] = {};
+        for(int j=0; j<4; j++){
+            day[j] = t[0][j] + t[1][j];
+            cout<<day[j]<<endl;
+        }
+
+    
+        // cetak total biaya
+        //cout << t[0] + t[1] << endl;
+}
