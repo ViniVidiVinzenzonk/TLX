@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int bebek[2][4] = {{0, 10, 50, 60}
+                    ,{7, 80, 9, 40}};
+    //selisih bebek pada hari ke i
+    int denda = 0;
+    for(int i=0; i<4; i++){
+        if(bebek[0][i]>bebek[1][i]){
+            denda += (bebek[0][i]-bebek[1][i])*1000;
+        }
+        else denda += (bebek[1][i]-bebek[0][i])*1000;
+    }
+    cout << denda << endl;
+}
