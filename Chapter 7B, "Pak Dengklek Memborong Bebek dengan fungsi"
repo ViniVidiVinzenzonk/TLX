@@ -15,7 +15,7 @@ int biaya(int a) {
 }
 
 int main() {
-    int totalHarga[4] = 0;
+    int totalHarga[4] = {};
     int bebek[2][4] = {{0, 10, 50, 60},
                        {7, 80, 9, 40}};
 
@@ -26,6 +26,6 @@ int main() {
         }
     }
 for(int i=0; i<4; i++){
-    cout << totalHarga[j] << endl;
+    cout << totalHarga[i] << endl;
 }
 }
