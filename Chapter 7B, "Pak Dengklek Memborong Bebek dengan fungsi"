@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int biaya(int a) {
+    int hargaBebek =0;
+    if(a>50){
+        hargaBebek = 50000;
+    }
+    else if(a<50 && a>=10){
+        hargaBebek = 75000;
+    }
+    else hargaBebek = 100000;
+    
+    return hargaBebek = hargaBebek*a;
+}
+
+int main() {
+    int totalHarga = 0;
+    int bebek[2][4] = {{0, 10, 50, 60},
+                       {7, 80, 9, 40}};
+
+    for (int i = 0; i < 2; i++) {
+        for(int j=0; j<4; j++){
+            totalHarga += biaya(bebek[i][j]);
+            
+        }
+    }
+        
+
+        cout << totalHarga << endl;
+    
+}
